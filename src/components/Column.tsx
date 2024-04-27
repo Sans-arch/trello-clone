@@ -1,8 +1,8 @@
-import Card from "./Card";
+import Card, { CardProps } from "./Card";
 
 interface ColumnProps {
   title: string;
-  cards: { description: string }[];
+  cards: CardProps[];
 }
 
 export default function Column({ title, cards }: ColumnProps) {
@@ -12,7 +12,7 @@ export default function Column({ title, cards }: ColumnProps) {
 
       <section className="flex flex-col gap-4">
         {cards.map((card) => (
-          <Card key={card.description} description={card.description} />
+          <Card key={card.description} {...card} />
         ))}
       </section>
     </div>

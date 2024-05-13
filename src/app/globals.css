@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 body {
-  background: #0077c3;
+  background: #3559e0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
 }
 
 @layer utilities {

@@ -3,5 +3,5 @@ interface TagColorProps {
 }
 
 export default function TagColor({ color }: TagColorProps) {
-  return <div className={`${color} h-3 inline w-16 rounded-3xl`}></div>;
+  return <div className={`${color} h-2 inline w-10 rounded-2xl`}></div>;
 }

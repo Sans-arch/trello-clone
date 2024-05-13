@@ -7,14 +7,19 @@ interface ColumnProps {
 
 export default function Column({ title, cards }: ColumnProps) {
   return (
-    <div className="flex flex-col bg-[#e3e4e6] w-96 h-fit rounded-md pt-2 pb-4">
-      <h2 className="text-slate-600 text-3xl font-bold text-center mt-2 mb-2">{title}</h2>
-
-      <section className="flex flex-col gap-4">
+    <li className="min-w-72 h-fit bg-gray-950/85 px-2 pt-2 pb-2 rounded-xl shadow-md">
+      <input
+        type="text"
+        className="text-gray-300 text-sm font-bold ml-3 mt-1 mb-3 leading-5 bg-transparent"
+        name=""
+        id=""
+        defaultValue={title}
+      />
+      <ol className="flex flex-col gap-3">
         {cards.map((card) => (
           <Card key={card.description} {...card} />
         ))}
-      </section>
-    </div>
+      </ol>
+    </li>
   );
 }
